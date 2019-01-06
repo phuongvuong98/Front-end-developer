@@ -8,16 +8,19 @@
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="animate.min.css">
     <title>Omnifood</title>
 </head>
 
 <body>
     <div class="header">
-        <nav class="sticky">
+        <nav>
             <div class="row">
-                <img src="resources/img/logo-white.png" alt="Logo" class="logo">
+                <img src="resources/img/logo-white.png" alt="Logo-white" class="logo-white">
+                <img src="resources/img/logo.png" alt="Logo-black" class="logo-black">
                 <ul class="main-nav">
-                    <li><a href="#">Food delivery</a></li>
+                    <li><a href="#meals">Food delivery</a></li>
                     <li><a href="#">How it works</a></li>
                     <li><a href="#">Our cities</a></li>
                     <li><a href="#">Sign up</a></li>
@@ -26,12 +29,12 @@
         </nav>
         <div class="hero-text-box">
             <h1>Goodbye junk food. <br> Hello super healthy meals</h1>
-            <a class="btn btn-full" href="#">I’m hungry</a>
-            <a class="btn btn-ghost" href="#">Show me more</a>
+            <a class="btn btn-full js--scroll-section-sign-up" href="#">I’m hungry</a>
+            <a class="btn btn-ghost js--scroll-section-contact" href="#">Show me more</a>
         </div>
     </div>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
         <div class="row">
             <h2>Get food fast &mdash; not fast food</h2>
             <p class="long-copy">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
@@ -60,7 +63,7 @@
         </div>
     </section>
 
-    <section class="section-meals">
+    <section class="section-meals" id="meals">
         <ul class="meals-showcase">
             <li>
                 <figure class="meals-photo clearfix">
@@ -262,7 +265,7 @@
         </div>
     </section>
 
-    <section class="section-sign-up">
+    <section class="section-sign-up js--section-sign-up">
         <div class="row">
             <h2>Start eating healthy today</h2>
         </div>
@@ -358,7 +361,7 @@
         </div>
     </section>
 
-    <section class="section-contact">
+    <section class="section-contact js--section-contact">
         <div class="row">
             <h2>We're happy to hear from you</h2>
         </div>
@@ -458,6 +461,10 @@
             <p>Sponges158_04/12/2018</p>
         </div>
     </footer>
+
+    <script type="text/javascript" src="vendors/js/jquery.waypoints.js"></script>
+    <script type="text/javascript" src="resources/js/script.js"></script>
+   
 </body>
 
 </html>
