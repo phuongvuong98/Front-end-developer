@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "\"Learn SASS\"",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
+    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '&gt; 5%, ie 9' -r css/*"
+  },
+  "author": "Nguyen Phuong Vuong",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "postcss-cli": "^6.1.1"
+  }
+}

@@ -1,0 +1,4 @@
+.DS_Store
+.localized
+secrets.txt
+node_modules

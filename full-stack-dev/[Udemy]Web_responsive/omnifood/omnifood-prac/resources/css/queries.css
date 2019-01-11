@@ -1,0 +1,109 @@
+/* Big tablet -> 1200px */
+@media only screen and (max-width: 1200px){
+    html {
+        font-size: 9px;
+    }
+}
+/* Small tablet -> big tablet: 768 -> 1023*/
+@media only screen and (max-width: 1023px){
+    html {
+        font-size: 7px;
+    }
+}
+/* Small phone -> small tablet: 481->767 */
+@media only screen and (max-width: 767px){
+    html {
+        font-size: 6px;
+    }
+    /* Main nav */
+    .nav-icon-mobile {
+        display: inline-block;
+    }
+
+    .main-nav {
+        float: left;
+        list-style: none;
+        margin-top: 6rem;
+        display: none;
+    }
+    
+    .main-nav li {
+        display: block;
+        margin-bottom: 4rem;
+    }
+   
+
+    /* ---Sticky---- */
+    .sticky .main-nav {
+        float: left;
+        display: block;
+    }
+
+    .sticky .main-nav li {
+        display: block;
+    }
+}
+/* Small phone: 0 -> 480px */
+@media only screen and (max-width: 480px){
+    .main-nav {
+        display: none;
+    }
+
+    .section-features i {
+        text-align: center;
+        display: block;
+    }
+
+    .meals-showcase li {
+        /* set width and position for each li (element internal )*/
+        width: 100%;
+        margin: 0;
+        float: left;
+        overflow: hidden;
+        /* hide when photo is big scaled */
+    }
+
+    h2 {
+        font-size: 170%;
+    }
+
+    .box-steps:first-child {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .app-photo {
+        float: none;
+        width: 20rem;
+        height: auto;
+    }    
+    
+    .plan-box {
+        margin: 2% 10%;
+    }
+
+    .footer .span-1-of-2 {
+        width: 50%;
+    }
+
+    .footer-nav li {
+        display: block;
+        margin-right: .5rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .footer-social li {
+        display: inline-block;
+        margin-right: .5rem;
+    }
+
+    .footer-social li:last-child {
+        margin-right: 5rem; 
+    }
+
+    .footer-nav li:last-child {
+        margin-bottom: 6rem; 
+    }
+} 
