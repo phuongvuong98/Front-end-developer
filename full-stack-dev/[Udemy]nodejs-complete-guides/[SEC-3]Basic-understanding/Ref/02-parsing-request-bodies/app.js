@@ -18,9 +18,10 @@ const server = http.createServer((req, res) => {
       body.push(chunk);
     });
     req.on('end', () => {
-      const parsedBody = Buffer.concat(body).toString();
-      const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.txt', message);
+      const parsedBody = Buffer.concat(body).toString('utf-8');
+      console.log(parsedBody);
+      const message = parsedBody.split('=')[1].replace(/\+/gi , ' '); // change char "+" to " "
+      fs.writeFileSync('message.txt', message, 'utf-8');
     });
     res.statusCode = 302;
     res.setHeader('Location', '/');
