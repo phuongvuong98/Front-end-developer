@@ -12,6 +12,7 @@ $color-primary-light : #7ed56f;
 $color-primary-dark : #28b485;
 $color-grey-dark : #777;
 $color-white: #fff;
+$color-black: #000;
 
 
 *,
@@ -42,61 +43,64 @@ body {
     background-position: center;
     height: 95vh;
     position: relative;
-
     clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
+
+
+    &__logo {
+        height: 3.5rem;
+        position: absolute;
+        top: 3.5rem;
+        left: 3rem;
+    }
+
+    &__text-box {
+        display: inline;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        z-index: -1;
+        backface-visibility: hidden;
+        transform: translate(-50%, -50%);
+    }
 }
 
-.header__logo {
-    height: 3.5rem;
-    position: absolute;
-    top: 3.5rem;
-    left: 3rem;
-}
-
-.header__text-box {
-    display: inline;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    z-index: -1;
-    backface-visibility: hidden;
-    transform: translate(-50%, -50%);
-}
 
 .heading-primary {
     text-transform: uppercase;
-    color: $color-white;
+    //color: $color-white;
+    color: blue;
+
+    &--main {
+        display: block;
+        letter-spacing: 3rem;
+        /* font-size: 150%; */
+        font-size: 7rem;
+        font-weight: 500;
+
+        animation-name: moveInLeft;
+        animation-duration: .7s;
+        animation-timing-function: ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards;
+    }
+
+    &--sub {
+        display: block;
+        letter-spacing: 1.7rem;
+        /* font-size: 50%; */
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 6rem;
+
+        animation-name: moveInRight;
+        animation-duration: .7s;
+        animation-timing-function: ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards;
+    }
 }
 
-.heading-primary--main {
-    display: block;
-    letter-spacing: 3rem;
-    /* font-size: 150%; */
-    font-size: 7rem;
-    font-weight: 500;
-
-    animation-name: moveInLeft;
-    animation-duration: .7s;
-    animation-timing-function: ease-out;
-    animation-delay: .75s;
-    animation-fill-mode: backwards;
-}
-
-.heading-primary--sub {
-    display: block;
-    letter-spacing: 1.7rem;
-    /* font-size: 50%; */
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 6rem;
-
-    animation-name: moveInRight;
-    animation-duration: .7s;
-    animation-timing-function: ease-out;
-    animation-delay: .75s;
-    animation-fill-mode: backwards;
-}
 
 @keyframes moveInLeft {
     0% {
@@ -150,7 +154,7 @@ body {
 }
 
 .btn:hover {
-    box-shadow: .1rem .5rem 2rem rgba(0,0,0,.2);
+    box-shadow: .1rem .5rem 2rem rgba($color-black,.2);
     transform: translateY(-.6rem);
 }
 
