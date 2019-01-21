@@ -1,0 +1,8 @@
+@mixin clearfix {
+    // ampersand operator
+    &::after {
+        content: "";
+        display: table;
+        clear: both; // float left and float right.
+    }
+}

@@ -1,0 +1,3 @@
+We will create a file for each components.
+The components are reusable building blocks on anywhere in the page. It's independence and held together 
+by the layout of the page.

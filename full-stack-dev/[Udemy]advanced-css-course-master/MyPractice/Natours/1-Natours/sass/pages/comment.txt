@@ -1,0 +1,4 @@
+We can create a new folder for that specific page.
+That is actually what going to happen in our case because we can treat the landing page
+that we're building as like home page and there certainly will be styles that are only going 
+apply to that page.

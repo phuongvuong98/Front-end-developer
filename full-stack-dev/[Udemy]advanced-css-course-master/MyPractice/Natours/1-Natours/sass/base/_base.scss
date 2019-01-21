@@ -1,0 +1,27 @@
+// This base file will be for the real low level basics, such as resets and styles for HTML and
+// body element selectors.
+
+// This file should be a partial => import it the main SCSS. The partial file always starts with underscore. 
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // font-size: 62.5*16/100 = 10px
+    font-size: 62.5%;
+}
+
+body {
+    /* font-size: 18px; */
+    font-family: Lato, sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    padding: 3rem;
+    color: $color-grey-dark;
+    box-sizing: border-box;
+}
