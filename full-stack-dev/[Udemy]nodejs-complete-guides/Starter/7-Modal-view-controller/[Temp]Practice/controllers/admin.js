@@ -32,6 +32,7 @@ exports.postAddProduct = (req, res, next) => {
 
     const product = new Product(null, title, imgURL, des, price);
     product.save();
+	//console.log('TCL: exports.postAddProduct -> product', product)
 
     res.redirect('/');
 }
@@ -68,13 +69,18 @@ exports.postEditProduct = (req, res, next) => {
     const imgURL = req.body.imageURL;
     const price = req.body.price;
     const des = req.body.description;
-
-    console.log('[Test1: edit]', id, price);
+	//console.log('TCL: exports.postEditProduct -> des', des)
 
     const product = new Product(id, title, imgURL, des, price);
     product.save();
 
     res.redirect('/products');
+}
+
+exports.postDeleteProduct = (req, res, next) => {
+    //console.log("[Test delete1]:", req.body.productId);
+    Product.delete(req.body.productId);
+    res.redirect('products');
 }
 
 exports.getProducts = (req, res, next) => {

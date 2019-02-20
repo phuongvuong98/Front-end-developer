@@ -61,6 +61,21 @@ module.exports = class Product {
         })
     }
 
+    static delete(id) {
+        getProductsFromFile(products => {
+            if(id) {
+                const existingProductIndex = products.findIndex(prod => prod.id === id);
+                const arrProduct = [...products];
+                const deletedProduct = arrProduct.filter(prod => prod.id !== id);
+                //console.log(deletedProduct);
+
+                fs.writeFile(p, JSON.stringify(deletedProduct), (err) => {
+                    console.log('[ERROR]:', err);
+                })
+            }
+        })
+    }
+
     // this is not called on a single instance of the product because it 
     // should fetch all products
     static fetchAll(cb) {

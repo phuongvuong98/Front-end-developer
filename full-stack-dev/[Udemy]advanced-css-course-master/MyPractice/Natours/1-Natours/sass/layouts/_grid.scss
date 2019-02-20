@@ -2,7 +2,7 @@
     // width: fixed width and max-width: 600px if actually width > 600, it breaks else(mean < 600px)actually auto 
     // fixed 100% actually width.
     max-width: $grid-width;
-    background-color: #eee;
+    //background-color: #eee;
     margin: 0 auto; // CSS automatically left = right
 
     // ampersand operator
@@ -17,7 +17,9 @@
     // ^:begin, *:any, $:end
     [class^="col-"] {
         height: 4rem;
-        background-color: orangered;
+        //@include linear-gradient(to left top, rgb(16, 141, 172), rgb(55, 191, 224));
+
+        //background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         
         // If you don't have clear-fix, height of row class = 0
         // because all of the child elements of this row elements are floated
