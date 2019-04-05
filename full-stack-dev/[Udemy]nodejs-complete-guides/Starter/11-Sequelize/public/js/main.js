@@ -5,7 +5,7 @@ const menuToggle = document.querySelector('#side-menu-toggle');
 function backdropClickHandler() {
   backdrop.style.display = 'none';
   sideDrawer.classList.remove('open');
-}
+}a
 
 function menuToggleClickHandler() {
   backdrop.style.display = 'block';

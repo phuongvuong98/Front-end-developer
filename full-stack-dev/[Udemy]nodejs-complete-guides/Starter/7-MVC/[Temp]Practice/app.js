@@ -8,6 +8,8 @@ const bodyParser = require('body-parser');
 const adminRoute = require('./routers/admin');
 const shopRouter = require('./routers/shop');
 
+const cryptRouter = require('./routers/crypt');
+
 const errorsController = require('./controllers/errors');
 
 // by setting this special view engine configuration, a reserved configuration which is understood.
@@ -27,8 +29,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 // user should be able to access public folder and
 app.use(express.static(path.join(rootPath, 'public')));
 
+
 app.use('/admin', adminRoute.router);
 app.use(shopRouter);
+
+
+app.use(cryptRouter);
+
+
 
 // if you don't use path, path will be '/' and don't care about method 
 app.use(errorsController.getError404);

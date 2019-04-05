@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/css/style.css">
+        <title>RSA Algorithm</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="algo-0-panel active">
+                    <div class="algo-name" id="name-0">Encription</div>
+                    
+                    
+                    <div class="form-control">
+                        <label for="">File encrypt</label>
+                        <input 
+                            type="file" 
+                            name="file-en" 
+                            id="file-en" >
+                    </div>
+
+                    <div class="form-control">
+                        <label for="">File key for encrypt</label>
+                        <input 
+                            type="file" 
+                            name="file-key-en" 
+                            id="file-key-en" >
+                    </div>
+
+                    <div class="form-control">
+                        <button class="btn-en"><i class="ion-ios-cog"></i>Encrypt</button>
+                    </div>
+                </div>
+                
+                <div class="algo-1-panel">
+                    <div class="algo-name" id="name-1">Decription</div>
+                    <div class="form-control">
+                        <label for="">Decrypted File</label>
+                        <input 
+                            type="file" 
+                            name="file-de" 
+                            id="file-de" >
+                    </div>
+
+                    <div class="form-control">
+                        <label for="">Key of File for decrypting</label>
+                        <input 
+                            type="file" 
+                            name="file-key-de" 
+                            id="file-key-de" >
+                    </div>
+
+                    <div class="form-control">
+                        <button class="btn-de"><i class="ion-md-construct"></i>Decrypt</button>
+                    </div>
+                </div>
+                
+                <button class="btn-title">RSA Algorithm</button>
+
+                <form class="DES-form" action="/cryptDES" method="GET">
+                    <button class="btn-DES"><i class="ion-md-arrow-round-back"></i>DES Algorithm</button>
+                </form>
+                <button class="btn-AES">AES Algorithm&nbsp;<i class="ion-md-arrow-round-forward"></i></button>
+                
+                <!-- <input type="text" placeholder="Final" class="final-score"> -->
+        </div>
+    
+        <!--<script src="app.js"></script>-->
+        <script src="challenges.js"></script>
+    </body>
+</html>
